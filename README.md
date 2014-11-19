@@ -37,12 +37,11 @@ var user = db3.get('user');
 With this syntax you can access to a desired database, selected by an argument:
 
 ```javascript
+  // "db" is one of the values: 'admin','modele','user'
+  // Also can be used the values : 'a', 'm' or 'u' instead
 function access( db ) {
     return db3.get(db)
 }
-var admin = db3.get('admin');
-var modele = db3.get();
-var user = db3.user();
 ```
 
 This tiny package has been written in order to be used in a much bigger project but still can be useful.
