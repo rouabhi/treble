@@ -1,5 +1,8 @@
 #Treble - What's new#
 
+##v 0.0.4 Now *sequelize* available in the output##
+You can get the sequelize paquege at ```db3.sequelize```.
+
 ##v 0.0.3 Removing *sequelize* dependency##
 Now no any dependency. Sequelize should be provided as a parameter in the constructor call: 
 ```javascript
