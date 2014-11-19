@@ -13,10 +13,10 @@ or
 
 ```javascript
 var treble = require("treble");
-var db3=treble("database","username","password","host");
+var db3=treble("database","username","password","host",port);
 
-db3.modele("database","username","password","host");
-db3.user("database","username","password","host");
+db3.modele("database","username","password","host",port);
+db3.user("database","username","password","host",port);
 ```
 
 You can then get the *sequelize* objet for each database:
