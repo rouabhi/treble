@@ -47,5 +47,6 @@ module.exports = function ( sequelize, db, user, pass, host, port ) {
 		 user:setgetUserDB,
 		 admin:setgetAdminDB,
 		 get:getDB,
+		 sequelize:sequelize
 	}
 }
