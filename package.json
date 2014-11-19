@@ -1,0 +1,29 @@
+{
+  "name": "treble",
+  "version": "0.0.1",
+  "description": "A node.js package that permits to handle 3 mySql databases at once ('admin', 'modele' and 'user') using Sequelize ORM.",
+  "repository": {
+    "type": "git",
+    "url": "github.com/rouabhi/treble"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "Sequelize",
+    "databases",
+    "mySql",
+    "ORM"
+  ],
+  "author": {
+    "name": "Samir ROUABHI",
+    "email": "rouabhi@gmail.com"
+  },
+  "license": "GNU GPL v2",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "Sequelize": "*",
+    "mySql":"*"
+  }
+}
