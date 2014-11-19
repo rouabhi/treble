@@ -6,14 +6,18 @@
 You have to initialize tha package by giving information about the admin database. 2 syntaxes are possible :
 ```javascript
 var treble = require("treble");
-var db3=treble("mysql://user:pass@example.com:9821/dbname");
+var Sequelize = require("sequelize");
+
+var db3=treble(Sequelize, "mysql://user:pass@example.com:9821/dbname");
 ```
 
 or
 
 ```javascript
 var treble = require("treble");
-var db3=treble("database","username","password","host",port);
+var Sequelize = require("sequelize");
+
+var db3=treble(Sequelize,"database","username","password","host",port);
 
 db3.modele("database","username","password","host",port);
 db3.user("database","username","password","host",port);

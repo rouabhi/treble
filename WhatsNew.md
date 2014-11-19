@@ -1,5 +1,11 @@
 #Treble - What's new#
 
+##v 0.0.3 Removing *sequelize* dependency##
+Now no any dependency. Sequelize should be provided as a parameter in the constructor call: 
+```javascript
+var db3=require("treble")(require("sequelize"),"database","username","password","host",port);
+```
+
 ##v 0.0.2 Using sequelize package##
 Dependency change : the package 'sequilize-mysql'(deprecated) is replaced by 'sequilize'.
 
