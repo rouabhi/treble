@@ -17,10 +17,10 @@ function getDB(db) {
 		dbpass = databases[db][2],
 		dbhost = databases[db][3],
 		dbport = databases[db][4];
-	if (!dbuser) databases[db] = new (require('sequelize-mysql').sequelize)(dbname, {language:'en',
+	if (!dbuser) databases[db] = new (require('sequelize'))(dbname, {language:'en',
 						 //logging:console.log, 
 						 define:{freezeTableName: true}});
-	else databases[db] = new (require('sequelize-mysql').sequelize)(dbname,dbuser,dbpass, {host:dbhost, port:dbport, language:'en',
+	else databases[db] = new (require('sequelize'))(dbname,dbuser,dbpass, {host:dbhost, port:dbport, language:'en',
 						 //logging:console.log, 
 						 define:{freezeTableName: true}});
 	return databases[db];
@@ -39,7 +39,7 @@ function setgetUserDB(db,user,pass,host,port) {
 	 else return getDB("user");
 }
 
-module.exports = function ( db , user, pass , host, port ) {
+module.exports = function ( db, user, pass, host, port ) {
 	 databases.admin = [db , user, pass , host , port];
 	 return {
 		 modele:setgetModeleDB,
