@@ -18,10 +18,10 @@ function getDB(db) {
 		dbhost = databases[db][3],
 		dbport = databases[db][4];
 	if (!dbuser) databases[db] = new (Sequelize)(dbname, {language:'en',
-						 logging:new Function(), 
+						 logging:false, 
 						 define:{freezeTableName: true}});
 	else databases[db] = new (Sequelize)(dbname,dbuser,dbpass, {host:dbhost, port:dbport, language:'en',
-						 logging:new Function(), 
+						 logging:false, 
 						 define:{freezeTableName: true}});
 	return databases[db];
 }
