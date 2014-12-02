@@ -49,6 +49,6 @@ module.exports = function ( sequelize, db, user, pass, host, port ) {
 		 get:getDB,
 		 sequelize:sequelize,
 		 log:false,
-		 logging:function(log){this.log = !!log; return this;}
+		 logging:function(log){this.log = log ? console.log:false; return this;}
 	}
 }
