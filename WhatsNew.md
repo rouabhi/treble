@@ -1,5 +1,12 @@
 #Treble - What's new#
 
+##v 0.0.6 logging method##
+You can activate logging (default value is desactivated):
+```javascript
+var Treble = require("treble"),
+    db3 = Treble( require("sequelize"),"database","username","password","host",port).logging(true);
+```
+
 ##v 0.0.4 Now *sequelize* available in the output##
 You can get the sequelize paquege at ```db3.sequelize```.
 

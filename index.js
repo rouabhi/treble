@@ -18,10 +18,10 @@ function getDB(db) {
 		dbhost = databases[db][3],
 		dbport = databases[db][4];
 	if (!dbuser) databases[db] = new (Sequelize)(dbname, {language:'en',
-						 logging:false, 
+						 logging:this.log, 
 						 define:{freezeTableName: true}});
 	else databases[db] = new (Sequelize)(dbname,dbuser,dbpass, {host:dbhost, port:dbport, language:'en',
-						 logging:false, 
+						 logging:this.log, 
 						 define:{freezeTableName: true}});
 	return databases[db];
 }
@@ -47,6 +47,8 @@ module.exports = function ( sequelize, db, user, pass, host, port ) {
 		 user:setgetUserDB,
 		 admin:setgetAdminDB,
 		 get:getDB,
-		 sequelize:sequelize
+		 sequelize:sequelize,
+		 log:false,
+		 logging:function(log){this.log = !!log; return this;}
 	}
 }

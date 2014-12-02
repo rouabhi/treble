@@ -48,4 +48,13 @@ function access( db ) {
 }
 ```
 
+## Logging ##
+You can activate logging to have a trace of all executed sql commands.
+You can activate logging (default value is desactivated):
+```javascript
+var treble = require("treble"),
+    db3 = treble( require("sequelize"),"database","username","password","host",port).logging(true);
+```
+
+
 This tiny package has been written in order to be used in a much bigger project but still can be useful.
